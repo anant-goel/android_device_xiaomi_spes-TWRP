@@ -3,7 +3,7 @@ env:
     FOX_SYNC: https://gitlab.com/OrangeFox/sync.git
 
     # Config
-    CONFIG: CI_script/config.sh
+    CONFIG: config.sh
 
     # Telegram
     # TG_CHAT_ID: ENCRYPTED[0003e1cf5276424a5b2afb8c6a39f2d830864e8555b37220bd3bf173f3ef5b8769ab98425d96a76adf64b18241c940dd]
@@ -21,13 +21,13 @@ task:
       memory: 20G
 
   Checks_script:
-      - curl -sL https://raw.githubusercontent.com/shashankx86/android_device_xiaomi_spes-TWRP/twrp-11/CI_script/checks.sh | bash
+      - curl -sL https://raw.githubusercontent.com/anant-goel/recoverybuilder/checks.sh | bash
 
   Sync_script:
-      - curl -sL https://raw.githubusercontent.com/shashankx86/android_device_xiaomi_spes-TWRP/twrp-11/CI_script/sync.sh | bash
+      - curl -sL https://raw.githubusercontent.com/anant-goel/recoverybuilder/sync.sh | bash
 
   Build_script:
-      - curl -sL https://raw.githubusercontent.com/shashankx86/android_device_xiaomi_spes-TWRP/twrp-11/CI_script/build.sh | bash
+      - curl -sL https://raw.githubusercontent.com/anant-goel/recoverybuilder/build.sh | bash
 
   Upload_script:
       - export TIMEOUT=43200 # Link timeout (in minutes)
